@@ -1,0 +1,88 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #007BFF; 
+}
+
+.main-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.main-menu ul li {
+    margin: 0 10px;
+    padding: 10px 0;
+}
+
+.main-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.main-menu ul li a:hover {
+    color: #007BFF;
+}
+
+.main-content .photo-section .photo {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.main-content .photo-section .photo img {
+    width: 50%;
+    height: auto;
+    display: block; 
+}
+
+.sidebar .sub-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar .sub-menu ul li {
+    margin: 10px;
+}
+
+.sidebar .sub-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.sidebar .sub-menu ul li a:hover {
+    color: #007BFF;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 5px solid #007BFF; /* Añadido borde superior */
+}

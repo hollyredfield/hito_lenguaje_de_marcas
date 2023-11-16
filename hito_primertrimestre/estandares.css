@@ -1,0 +1,350 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+    transition: background 0.5s ease;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+header {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+header:hover {
+    background-color: #333;
+}
+
+
+nav.main-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+nav.main-menu ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+
+nav.main-menu li {
+    margin: 0 10px;
+}
+
+nav.main-menu a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+nav.main-menu a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    nav.main-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease;
+    }
+
+    nav.main-menu.open {
+        height: 200px;
+    }
+
+    nav.main-menu ul {
+        flex-direction: column;
+    }
+
+    nav.main-menu li {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+
+.main-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #777;
+    border-radius: 5px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+
+.estandares-section {
+    text-align: justify;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.estandares-section h2 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.estandares-section p {
+    line-height: 1.6;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+
+.layered-text {
+    position: relative;
+    display: inline-block;
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.layered-text::before,
+.layered-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.layered-text::before {
+    color: #f00;
+    z-index: -1;
+    transform: translate(-5px, -5px);
+}
+
+.layered-text::after {
+    color: #0f0;
+    z-index: -2;
+    transform: translate(5px, 5px);
+}
+
+.layered-text:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para la página */
+body {
+    background: #f5f5f5;
+}
+
+header {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav.main-menu {
+    background-color: #1a1a1a;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav.main-menu a {
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav.main-menu a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.main-content {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.estandares-section h2 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+    border: 2px solid #ccc;
+    padding: 10px;
+}
+
+
+.estandares-section h2 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+    border: 2px solid #ccc;
+    padding: 10px;
+}
+
+.estandares-section p {
+    line-height: 1.6;
+    color: #555;
+    transition: color 0.3s ease;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.estandares-section p {
+    line-height: 1.6;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+/* Estilos para el formulario */
+.form-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-section input[type="text"],
+.form-section input[type="email"],
+.form-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.form-section input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.form-section input[type="submit"]:hover {
+    background-color: #444;
+}
+
+.form-section label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+
+/* Estilos para el grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.grid-item {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para el texto */
+.texto-bonito {
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.texto-bonito::before,
+.texto-bonito::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.texto-bonito::before {
+    color: #f00;
+    z-index: -1;
+    transform: translate(-5px, -5px);
+}
+
+.texto-bonito::after {
+    color: #0f0;
+    z-index: -2;
+    transform: translate(5px, 5px);
+}
+
+.texto-bonito:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para las animaciones */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.slide-in {
+    animation: slideInFromLeft 0.5s ease;
+}
